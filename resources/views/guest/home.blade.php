@@ -64,6 +64,7 @@
         </style>
     </head>
     <body>
+        
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -83,9 +84,8 @@
                 <div class="title m-b-md">
                     Benvenuti nel Blog
                 </div>
-
-                
             </div>
         </div>
+    
     </body>
 </html>

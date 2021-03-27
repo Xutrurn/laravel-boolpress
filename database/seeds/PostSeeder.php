@@ -21,6 +21,7 @@ class PostSeeder extends Seeder
             
             $newPost->title = 'ciao a tutti';
             //$newPost->title = $faker->sentence(3);
+            //$newPost->title = $faker->words(3);
             $newPost->content = $faker->text(100);
 
             // seleziona tutti gli utenti
