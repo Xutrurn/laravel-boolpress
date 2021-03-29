@@ -9,6 +9,7 @@
                 <th>Title</th>
                 <th>User Id</th>
                 <th>Body</th>
+                <th>Immagine</th>
                 <th>Created At</th>
                 <th>Updated At</th>
             </tr>
@@ -20,6 +21,7 @@
                 <td>{{ $post->title }}</td>
                 <td>{{ $post->user_id }}</td>
                 <td>{{ $post->content }}</td>
+                <td><img src="{{ asset('storage/'.$post->cover) }}" alt="{{ $post->title }}"></td>
                 <td>{{ $post->created_at }}</td>
                 <td>{{ $post->updated_at }}</td>
             </tr>

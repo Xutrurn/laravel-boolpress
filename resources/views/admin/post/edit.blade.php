@@ -3,13 +3,25 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <form action="{{ route('post.update', $post) }}" method="post">
+            <form action="{{ route('post.update', $post) }}" method="post" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 
                 <div class="form-group">
                     <label for="title">Title</label>
                     <input class="form-control" type="text" name="title" value="{{ $post->title }}">
+                </div>
+
+                @if ($post->cover)
+                    <p>Immagine inserita :</p>
+                    <img src="{{ asset('storage/'.$post->cover) }}" alt="{{ $post->title }}">
+                    @else
+                        <p>Immagine non presente</p> 
+                @endif
+
+                <div class="form-group">
+                    <label for="immagine">Carica l'immagine</label>
+                    <input type="file" class="form-control-file" id="immagine" name="image">
                 </div>
 
                 <div class="form-group">
